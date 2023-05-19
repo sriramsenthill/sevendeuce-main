@@ -5,6 +5,7 @@ import "./Deposit.css";
 import qrcodeUSDT from "../assets/qrcodeUSDT.png";
 import qrcodeBitcoin from "../assets/qrcodeBitcoin.png";
 import qrcodeETH from "../assets/qrcodeETH.png";
+import bch from "../assets/bch.png";
 import { auth, signInWithGoogle } from "../Firebase";
 
 const coins = {
@@ -25,6 +26,12 @@ const coins = {
     network: "ERC20",
     address: "0xc0951b7261cc7aaef122291284075682d32fbeb9",
     qrcode: qrcodeETH,
+  },
+  bitcoinCash: {
+    name: "Bitcoin Cash",
+    network: "BCH",
+    address: "162HJ3fGmDscMqShTKJawp7dCQamdayES9",
+    qrcode: bch,
   },
 };
 
@@ -63,6 +70,7 @@ function Deposit() {
               <option value="bitcoin">Bitcoin</option>
               <option value="usdt">USDT</option>
               <option value="ethereum">Ethereum</option>
+              <option value="bitcoinCash">Bitcoin Cash</option>
             </select>
             <p>We accept {coins[selectedCoin].name}. Send {coins[selectedCoin].name} to the following address & network:</p>
             <div className="deposit-info">
