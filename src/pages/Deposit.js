@@ -22,7 +22,7 @@ const coins = {
   },
   ethereum: {
     name: "Ethereum",
-    network: "ETH",
+    network: "ERC20",
     address: "0xc0951b7261cc7aaef122291284075682d32fbeb9",
     qrcode: qrcodeETH,
   },

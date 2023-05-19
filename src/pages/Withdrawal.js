@@ -15,7 +15,7 @@ const coins = {
   },
   ethereum: {
     name: 'Ethereum',
-    network: 'ETH',
+    network: 'ERC20',
   },
 };
 
