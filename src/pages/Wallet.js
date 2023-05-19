@@ -6,6 +6,7 @@ import "./wallet.css";
 
 function Wallet() {
   const [user, setUser] = useState(null);
+  const [selectedCoin, setSelectedCoin] = useState('usdt');
 
   useEffect(() => {
     const auth = getAuth();
@@ -19,15 +20,31 @@ function Wallet() {
     return unsubscribe;
   }, []);
 
+  const handleCoinSelect = (event) => {
+    setSelectedCoin(event.target.value);
+  };
+
   return (
     <>
       <Navbar />
       <div className="container d-flex justify-content-center align-items-center h-100">
         {user ? (
           <div className="wallet-card">
-            <h2 className="wallet-heading">USDT Balance</h2>
+            <h2 className="wallet-heading">{selectedCoin.toUpperCase()} Balance</h2>
             <div className="wallet-body">
-              <h1 className="wallet-balance">0 USDT</h1>
+              <h1 className="wallet-balance">0 {selectedCoin.toUpperCase()}</h1>
+              <div className="coin-selector">
+                <select
+                  className="coin-dropdown"
+                  value={selectedCoin}
+                  onChange={handleCoinSelect}
+                >
+                  <option value="btc">BTC</option>
+                  <option value="eth">ETH</option>
+                  <option value="bch">BCH</option>
+                  <option value="usdt">USDT</option>
+                </select>
+              </div>
               <a href="/Withdrawal" className="wallet-button">Withdraw</a>
             </div>
           </div>

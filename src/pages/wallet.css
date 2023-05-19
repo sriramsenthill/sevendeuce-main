@@ -51,3 +51,19 @@
     align-items: center;
     height: 100vh;
   }
+  .coin-selector {
+    margin-bottom: 20px;
+  }
+  
+  .coin-dropdown {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 200px;
+    appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }

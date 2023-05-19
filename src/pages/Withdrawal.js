@@ -17,6 +17,10 @@ const coins = {
     name: 'Ethereum',
     network: 'ERC20',
   },
+  bitcoinCash: {
+    name: 'Bitcoin Cash',
+    network: 'BCH',
+  },
 };
 
 function Withdrawal() {
@@ -79,6 +83,7 @@ function Withdrawal() {
                             <option value="bitcoin">Bitcoin</option>
                             <option value="usdt">USDT</option>
                             <option value="ethereum">Ethereum</option>
+                            <option value="bitcoinCash">Bitcoin Cash</option>
                           </select>
                           <div className="coin-icon">
                             <i className={`fab fa-${coin}`} />
